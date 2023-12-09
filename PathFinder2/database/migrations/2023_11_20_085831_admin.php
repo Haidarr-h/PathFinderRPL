@@ -11,23 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('pengguna', function (Blueprint $table) {
             $table->id(); // Auto-incremental primary key
             $table->string('nama Admin');
             $table->string('shift');
             $table->string('password');
             $table->rememberToken();
-            $table->timestamps(); // Created_at and updated_at columns
+            $table->timestamps(); 
         });
 
-        Schema::create('career', function (Blueprint $table) {
-            $table->id(); // Auto-incremental primary key
-            // $table->string('id_career');
-            $table->string('karir');
-            $table->string('tahap');
-            $table->rememberToken();
-            $table->timestamps(); // Created_at and updated_at columns
-        });
+        
 
         Schema::create('course', function (Blueprint $table) {
             $table->id(); // Auto-incremental primary key
@@ -35,7 +28,7 @@ return new class extends Migration
             $table->integer('durasi');
             $table->string('topik');
             $table->rememberToken();
-            $table->timestamps(); // Created_at and updated_at columns
+            $table->timestamps(); 
         });
 
         Schema::create('internship', function (Blueprint $table) {
@@ -44,8 +37,9 @@ return new class extends Migration
             $table->string('role');
             $table->integer('lamaWaktu');
             $table->rememberToken();
-            $table->timestamps(); // Created_at and updated_at columns
+            $table->timestamps(); 
         });
+
     }
 
     /**
@@ -53,6 +47,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('pengguna');
+        Schema::dropIfExists('course');
+        Schema::dropIfExists('internship');
+
     }
 };
