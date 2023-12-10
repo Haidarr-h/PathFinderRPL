@@ -43,11 +43,10 @@ Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']); /
 
 // ! INTERNSHIP FINDER ADMIN
 Route::resource('magang', magangController::class);
+Route::get('/internshipFinderAdmin', [magangController::class, 'index']); 
 
 // ! COURSE FINDER ADMIN
-Route::get('/courseFinderAdmi', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
-Route::get('/courseFinderAdmin', [kursusController::class, 'index']); //* PENDING UPDATE
-
+Route::get('/courseFinderAdmin', [kursusController::class, 'index']); 
 Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']);
 Route::resource('kursus', kursusController::class);
 

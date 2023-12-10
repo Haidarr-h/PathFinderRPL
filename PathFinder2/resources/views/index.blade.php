@@ -195,19 +195,19 @@
       <img src="{{ asset('image/lucide_rocket.png') }}" alt="Rocket Icon">
       <h5>PathFinder</h5>
     </div>
-    <a href="#">
+    <a href="/careerPathAdmin">
       <img src="{{ asset('image/lucide_home.png') }}" alt="Settings Icon">
       Dashboard
     </a>
-    <a href="#">
+    <a href="/careerPathAdmin">
       <img src="{{ asset('image/lucide_flag.png') }}" alt="Settings Icon">
       Career Path
     </a>
-    <a href="#">
+    <a href="/internshipFinderAdmin">
       <img src="{{ asset('image/internship.png') }}" alt="Settings Icon">
       Internship Finder
     </a>
-    <a href="#">
+    <a href="/courseFinderAdmin">
       <img src="{{ asset('image/lucide_award.png') }}" alt="Settings Icon">
       Course Finder
     </a>

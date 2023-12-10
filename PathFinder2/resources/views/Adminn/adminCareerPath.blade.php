@@ -13,13 +13,13 @@
 
     <div class="left-sidebar">
         <!-- //*ganti href ke dashboard -->
-        <div class="app-name" href="#">
+        <div class="app-name" href="/careerPathAdmin">
             <img src="/images/lucide_rocket.png" alt="Rocket Icon">
             <h3>PathFinder.</h3>
         </div>
 
         <div class="options">
-            <a href="#" class="dashboard">
+            <a href="/careerPathAdmin" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
             </a>
@@ -31,7 +31,7 @@
                 </a>
             </div>
 
-            <a href="/courseFinderAdmin">
+            <a href="/internshipFinderAdmin">
                 <img src="/images/internshipFinder.png" alt="Settings Icon">
                 Internship Finder
             </a>
