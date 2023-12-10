@@ -12,3 +12,5 @@ class magang extends Model
     protected $table = 'intern';
     public $timestamps = false;
 }
+
+

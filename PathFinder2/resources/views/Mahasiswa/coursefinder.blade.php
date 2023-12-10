@@ -66,9 +66,9 @@
 
         <div class="search-box">
             <input text="type" placeholder="Search your role...">
-            <div class="search-btn">
+            <!-- <div class="search-btn">
                 <img src="/images/search.png" alt="search">
-            </div>
+            </div> -->
         </div>
 
         <div class="box">
@@ -79,6 +79,8 @@
         </div>
 
         <div class="card-container row">
+            @foreach($course as $item)
+            @if($item->stream == "DataScience")
             <a href="" class="card">
                 <div class="company">
                     <div class="logo">
@@ -87,9 +89,11 @@
 
                     <div class="title">
                         <p class="role">
-
+                            {{$item->role}}
+                            
                         </p>
                         <p class="perusahaan">
+                            {{$item->perusahaan}}
                           
                         </p>
                     </div>
@@ -98,16 +102,20 @@
                 <div class="details">
                     <div class="list row">
                         <img src="/images/place.png" alt="">
-                        <p class="lokasi">tes</p>
+                        <p class="durasi">
+                            {{$item->durasi}}
+                        </p>
                     </div>
                     <div class="list row">
                         <img src="/images/place.png" alt="">
-                        <p class="lokasi">tes</p>
+                        <p class="lokasi">
+                            {{$item->lokasi}}
+                        </p>
                     </div>
                 </div>
             </a>
-
-            
+            @endif
+            @endforeach
         </div>
 
 
@@ -120,6 +128,8 @@
         </div>
 
         <div class="card-container row">
+            @foreach($course as $item)
+            @if($item->stream == "InteractiveMedia")
             <a href="" class="card">
                 <div class="company">
                     <div class="logo">
@@ -128,10 +138,11 @@
 
                     <div class="title">
                         <p class="role">
+                            {{$item->role}}
                            
                         </p>
                         <p class="perusahaan">
-                            
+                            {{$item->perusahaan}}
                         </p>
                     </div>
                 </div>
@@ -139,24 +150,22 @@
                 <div class="details">
                     <div class="list row">
                         <img src="/images/place.png" alt="">
-                        <p class="lokasi">tes</p>
+                        <p class="lokasi">
+                            {{$item->lokasi}}
+                        </p>
                     </div>
                     <div class="list row">
                         <img src="/images/place.png" alt="">
-                        <p class="lokasi">tes</p>
+                        <p class="lokasi">
+                            {{$item->lokasi}}
+                        </p>
                     </div>
                 </div>
             </a>
-
-           
-
-            
+            @endif
+            @endforeach
         </div>
 
-
-
-
-        
     </div>
 
     <!-- <div class="right-sidebar">
