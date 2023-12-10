@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('rating');
             $table->string('durasi');
             $table->string('topik');
+            $table->string('stream');
 
             
         });

@@ -36,9 +36,14 @@ Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
 Route::get('/datascience',[MahasiswaController::class, 'showDataScienceIntern']);
 Route::get('/interactivemedia',[MahasiswaController::class, 'showInteractiveMediaIntern']);
+Route::get('/interndetail',[MahasiswaController::class, 'showInternshipDetail']);
+Route::get('/coursedetail',[MahasiswaController::class, 'showCourseDetail']);
+
 
 // ! COURSE FINDER
 Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']); //*BELOMMM
+Route::get('/datasciencecourse',[MahasiswaController::class, 'showDataScienceCourse']);
+Route::get('/interactivemediacourse',[MahasiswaController::class, 'showInteractiveMediaCourse']);
 
 
 // ! ==============ADMIN===============

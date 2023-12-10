@@ -74,26 +74,26 @@
         <div class="box">
             <div class="headline">
                 <h3>Data Science</h3>
-                <a href="">Show more</a>
+                <a href="/datasciencecourse">Show more</a>
             </div>
         </div>
 
         <div class="card-container row">
             @foreach($course as $item)
             @if($item->stream == "DataScience")
-            <a href="" class="card">
+            <a href="coursedetail" class="card">
                 <div class="company">
                     <div class="logo">
-                        <img src="/images/logo-gojek.png" alt="">
+                        <img src="/images/revouu.png" alt="">
                     </div>
 
                     <div class="title">
-                        <p class="role">
-                            {{$item->role}}
+                        <p class="topik">
+                            {{$item->topik}}
                             
                         </p>
                         <p class="perusahaan">
-                            {{$item->perusahaan}}
+                            {{$item->course_name}}
                           
                         </p>
                     </div>
@@ -101,15 +101,9 @@
 
                 <div class="details">
                     <div class="list row">
-                        <img src="/images/place.png" alt="">
+                        <img src="/images/timer.png" alt="">
                         <p class="durasi">
                             {{$item->durasi}}
-                        </p>
-                    </div>
-                    <div class="list row">
-                        <img src="/images/place.png" alt="">
-                        <p class="lokasi">
-                            {{$item->lokasi}}
                         </p>
                     </div>
                 </div>
@@ -123,7 +117,7 @@
         <div class="box">
             <div class="headline">
                     <h3>Interactive Media</h3>
-                    <a href="">Show more</a>
+                    <a href="/interactivemediacourse">Show more</a>
             </div>
         </div>
 
@@ -133,31 +127,25 @@
             <a href="" class="card">
                 <div class="company">
                     <div class="logo">
-                        <img src="/images/logo-gojek.png" alt="">
+                        <img src="/images/revouu.png" alt="">
                     </div>
 
                     <div class="title">
-                        <p class="role">
-                            {{$item->role}}
+                        <p class="topik">
+                            {{$item->topik}}
                            
                         </p>
                         <p class="perusahaan">
-                            {{$item->perusahaan}}
+                            {{$item->course_name}}
                         </p>
                     </div>
                 </div>
 
                 <div class="details">
                     <div class="list row">
-                        <img src="/images/place.png" alt="">
-                        <p class="lokasi">
-                            {{$item->lokasi}}
-                        </p>
-                    </div>
-                    <div class="list row">
-                        <img src="/images/place.png" alt="">
-                        <p class="lokasi">
-                            {{$item->lokasi}}
+                        <img src="/images/timer.png" alt="">
+                        <p class="durasi">
+                            {{$item->durasi}}
                         </p>
                     </div>
                 </div>

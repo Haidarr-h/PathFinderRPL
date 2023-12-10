@@ -23,7 +23,8 @@ class courseSeeder extends Seeder
                 'course_name' => 'RevoU',
                 'rating' => '5',
                 'durasi' => '4 months',
-                'topik' => 'Data Analyst'
+                'topik' => 'Data Analyst',
+                'stream' => 'DataScience'
 
             ],
             [
@@ -31,35 +32,40 @@ class courseSeeder extends Seeder
                 'course_name' => 'GreatEdu',
                 'rating' => '4',
                 'durasi' => '4 months',
-                'topik' => 'Data Science Bootcamp'
+                'topik' => 'Data Science Bootcamp',
+                'stream' => 'DataScience'
             ],
             [
                 'id_course' => '3',
                 'course_name' => 'Mojadiapp',
                 'rating' => '4 ',
                 'durasi' => '5 months',
-                'topik' => 'Data Scientist & Analyst' 
+                'topik' => 'Data Scientist & Analyst' ,
+                'stream' => 'DataScience'
             ],
             [
                 'id_course' => '4',
                 'course_name' => 'Sanber Foundation',
                 'rating' => '5',
                 'durasi' => '4 months',
-                'topik' => 'UI/UX Designer'
+                'topik' => 'UI/UX Designer',
+                'stream' => 'InteractiveMedia'
             ],
             [
                 'id_course' => '5',
                 'course_name' => 'GreatEdu',
                 'rating' => '5',
                 'durasi' => '5 months',
-                'topik' => 'UI/UX Bootcamp'
+                'topik' => 'UI/UX Bootcamp',
+                'stream' => 'InteractiveMedia'
             ],
             [
                 'id_course' => '6',
                 'course_name' => 'Cakap',
                 'rating' => '4',
                 'durasi' => '5 months',
-                'topik' => 'UI/UX Designer'
+                'topik' => 'UI/UX Designer',
+                'stream' => 'InteractiveMedia'
             ]
 
             
