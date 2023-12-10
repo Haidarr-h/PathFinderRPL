@@ -5,6 +5,8 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\kursusController;
 use App\Http\Controllers\magangController;
+use App\Http\Controllers\SessionController;
+
 
 
 
@@ -13,7 +15,11 @@ use App\Http\Controllers\magangController;
 //* Route::post('/tim/simpan-tim/{idPengguna}/{namePengguna}', [TimController::class, 'simpanTim'])->name('simpan-tim');
 
 
-Route::get('/', [MahasiswaController::class, 'showCareerPath']); //* DEFAULT
+Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
+
+// login 
+Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
+Route::post('/sesi/login', [SessionController::class, 'login']); //*pencet button login
 
 
 // ! ==============MAHASISWA===============
