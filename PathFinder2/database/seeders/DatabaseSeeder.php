@@ -15,5 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(internshipSeeder::class);
         $this->call(courseSeeder::class);
         $this->call(userSeeder::class);
+        $this->call(careerPath::class);
+
     }
 }
