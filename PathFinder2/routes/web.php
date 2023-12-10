@@ -25,6 +25,8 @@ Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::
 // ! INTERNSHIP FINDER
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
 Route::resource('magang', magangController::class);
+Route::get('/datascience',[MahasiswaController::class, 'showDataScienceIntern']);
+Route::get('/interactivemedia',[MahasiswaController::class, 'showInteractiveMediaIntern']);
 
 // ! COURSE FINDER
 Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);

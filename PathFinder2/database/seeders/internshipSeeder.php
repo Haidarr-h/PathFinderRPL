@@ -38,7 +38,7 @@ class internshipSeeder extends Seeder
             [
                 'id_internship' => '3',
                 'perusahaan' => 'Grab',
-                'role' => 'Data Scients Intern',
+                'role' => 'Data Scientist Intern',
                 'durasi' => '4 months',
                 'lokasi' => 'Jakarta Selatan',
                 'stream' => 'DataScience'  
