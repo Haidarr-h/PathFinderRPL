@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('role');
             $table->string('durasi');
             $table->string('lokasi');
-            
-
+            $table->string('stream');
         });
     }
 

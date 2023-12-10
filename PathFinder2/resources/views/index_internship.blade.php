@@ -235,6 +235,7 @@
             <th class="col-md-2">Role</th>
             <th class="col-md-2">Durasi</th>
             <th class="col-md-2">Lokasi</th>
+            <th class="col-md-2">Stream</th>
             <th class="col-md-2">Actions</th>
           </tr>
         </thead>
@@ -246,6 +247,7 @@
               <td>{{$item->role}}</td>
               <td>{{$item->durasi}}</td>
               <td>{{$item->lokasi}}</td>
+              <td>{{$item->stream}}</td>
               <td>
               <div class="btn-group" role="group">
                   <a href='{{url('magang/'.$item->id_internship.'/edit')}}' class="btn btn-warning btn-sm mr-1">Edit</a>

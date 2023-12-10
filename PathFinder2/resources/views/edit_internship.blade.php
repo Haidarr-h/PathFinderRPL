@@ -255,6 +255,12 @@
           </div>
         </div>
         <div class="mb-3 row">
+          <label for="rating" class="col-sm-2 col-form-label">Stream:</label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control" name='stream' value="{{$data->stream}}" id="stream">
+          </div>
+        </div>
+        <div class="mb-3 row">
           <div class="col-sm-10 offset-sm-2">
             <button type="submit" class="btn btn-primary" name="submit">SIMPAN</button>
           </div>

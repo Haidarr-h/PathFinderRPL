@@ -19,6 +19,7 @@ class magangController extends Controller
                     ->orwhere('role','like',"%$katakunci%")
                     ->orwhere('durasi','like',"%$katakunci%")
                     ->orwhere('lokasi','like',"%$katakunci%")
+                    ->orwhere('stream','like',"%$katakunci%")
                     ->get();
         } else {
             $data = magang::orderBy('id_internship','asc')->get();
@@ -45,6 +46,7 @@ class magangController extends Controller
         Session()->flash('role',$request->role);
         Session()->flash('durasi',$request->durasi);
         Session()->flash('lokasi',$request->lokasi);
+        Session()->flash('stream',$request->stream);
 
 
         $request->validate([
@@ -53,6 +55,7 @@ class magangController extends Controller
             'role'=>'required',
             'durasi'=>'required',
             'lokasi'=>'required',
+            'stream'=>'required',
     ],[
         'id_internship.required'=>'ID wajib diisi',
         'id_internship.numeric'=>'ID wajib diisi dalam angka',
@@ -61,6 +64,7 @@ class magangController extends Controller
         'role.required'=>'role wajib diisi',
         'durasi.required'=>'durasi wajib diisi',
         'lokasi.required'=>'lokasi wajib diisi',
+        'stream.required'=>'stream wajib diisi',
     ]);
 
         $data = [
@@ -69,6 +73,7 @@ class magangController extends Controller
             'role'=>$request->role,
             'durasi'=>$request->durasi,
             'lokasi'=>$request->lokasi,
+            'stream'=>$request->stream,
         ];
 
         magang::create($data);
@@ -102,11 +107,13 @@ class magangController extends Controller
             'role'=>'required',
             'durasi'=>'required',
             'lokasi'=>'required',
+            'stream'=>'required',
         ],[
             'perusahaan.required'=>'perusahaan course diisi',
             'durasi.required'=>'durasi wajib diisi',
             'role.required'=>'role wajib diisi',
             'lokasi.required'=>'lokasi wajib diisi',
+            'stream.required'=>'stream wajib diisi',
         ]);
         
         $data = [
@@ -114,6 +121,7 @@ class magangController extends Controller
             'role'=>$request->role,
             'durasi'=>$request->durasi,
             'lokasi'=>$request->durasi,
+            'stream'=>$request->stream,
         ];
         
 
