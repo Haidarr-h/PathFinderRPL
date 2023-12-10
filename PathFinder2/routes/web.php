@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\kursusController;
+use App\Http\Controllers\SessionController;
 
 
 //*Contoh == Route::get('/edit', [TimController::class, 'edit']);
@@ -12,7 +13,7 @@ use App\Http\Controllers\kursusController;
 
 
 Route::get('/', function () {
-    return view('Adminn.adminCareerPath');
+    return view('sesi.index');
 });
 
 
@@ -32,7 +33,20 @@ Route::get('/CareerPath/CreateForm', [AdminController::class, 'createCareerPath'
 // *CRUD create karir
 Route::post('/CareerPath/Create', [AdminController::class, 'createKarir'])->name('tambahKarir');
 
+// ! LOGIN
+Route::get('/sesi', [SessionController::class, 'index']);
+Route::post('/sesi/login', [SessionController::class, 'login']);
 
+// Fitur Register
+Route::get('/sesi/register', [SessionController::class, 'register']);
+Route::post('/sesi/create', [SessionController::class, 'create']);
+
+// Fitur Login
+Route::get('/sesi', [SessionController::class, 'index']);
+Route::post('/sesi/login', [SessionController::class, 'login']);
+
+// Fitur Logout
+Route::get('/sesi/logout', [SessionController::class, 'logout']);
 
 
 
