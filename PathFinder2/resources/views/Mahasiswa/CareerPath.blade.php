@@ -13,13 +13,13 @@
 
     <div class="left-sidebar">
         <!-- //*ganti href ke dashboard -->
-        <div class="app-name" href="#">
+        <div class="app-name" href="/careerPath/{{ $namePengguna }}">
             <img src="/images/lucide_rocket.png" alt="Rocket Icon">
             <h3>PathFinder.</h3>
         </div>
 
         <div class="options">
-            <a href="/careerPath" class="dashboard">
+            <a href="/careerPath/{{ $namePengguna }}" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
             </a>
@@ -29,18 +29,18 @@
             </a>
 
             <div class="mainSub2">
-                <a href="/careerPath" class="mainSub">
+                <a href="/careerPath/{{ $namePengguna }}" class="mainSub">
                     <img src="/images/lucide_flag-triangle-right.png" alt="Settings Icon">
                     Career Path
                 </a>
             </div>
 
-            <a href="/internshipfinder">
+            <a href="/internshipfinder/{{ $namePengguna }}">
                 <img src="/images/internshipFinder.png" alt="Settings Icon">
                 Internship Finder
             </a>
 
-            <a href="/coursefinder">
+            <a href="/coursefinder/{{ $namePengguna }}">
                 <img src="/images/lucide_award.png" alt="Settings Icon">
                 Course Finder
             </a>
@@ -106,6 +106,8 @@
     <div class="right-sidebar">
         <div class="profile">
             <img src="/images/profileImage.png" alt="Profile">
+            <h3>Hello !</h3>
+            <h2>{{ $namePengguna }}</h2>
         </div>
     </div>
 

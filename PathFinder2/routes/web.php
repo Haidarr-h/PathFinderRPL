@@ -22,11 +22,18 @@ Route::get('/sesi/logout', [SessionController::class, 'logout']); //*pencet butt
 
 // ! ==============MAHASISWA===============
 // ! CAREERPATH MAHASISWA
+// /careerPath/$namePengguna
 Route::get('/careerPath', [MahasiswaController::class, 'showCareerPath']);
+Route::get('/careerPath', [MahasiswaController::class, 'showCareerPath']);
+Route::get('/careerPath/{namePengguna}', [MahasiswaController::class, 'showCareerPath']);
+
+
 Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::class, 'kontenMHSCareerPath'])->name('kontenKarirMHS');
 
 // ! INTERNSHIP FINDER
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
+Route::get('/internshipfinder/{namePengguna}', [MahasiswaController::class, 'showInternshipFinder']);
+
 Route::get('/datascience',[MahasiswaController::class, 'showDataScienceIntern']);
 Route::get('/interactivemedia',[MahasiswaController::class, 'showInteractiveMediaIntern']);
 

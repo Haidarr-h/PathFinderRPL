@@ -13,13 +13,13 @@
 
     <div class="left-sidebar">
         <!-- //*ganti href ke dashboard -->
-        <div class="app-name" href="#">
+        <div class="app-name" href="/careerPath/{{ $namePengguna }}">
             <img src="/images/lucide_rocket.png" alt="Rocket Icon">
             <h3>PathFinder.</h3>
         </div>
 
         <div class="options">
-            <a href="#" class="dashboard">
+            <a href="/careerPath/{{ $namePengguna }}" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
             </a>
@@ -28,7 +28,7 @@
                 Favorites
             </a>
 
-            <a href="/careerPath">
+            <a href="/careerPath/{{ $namePengguna }}">
                 <img src="/images/lucide_flag-triangle-right-2.png" alt="Settings Icon">
                     Career Path
             </a>
@@ -49,7 +49,7 @@
                 <img src="/images/lucide_wrench.png" alt="Settings Icon">
                 Settings
             </a>
-            <a href="#" class="mt-auto">
+            <a href="/sesi/logout" class="mt-auto">
                 <img src="/images/lucide_log-out.png" alt="Settings Icon">
                 Log Out
             </a>

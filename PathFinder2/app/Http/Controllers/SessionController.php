@@ -40,7 +40,7 @@ class SessionController extends Controller
             if (strtolower($kategori) == 'user') {
                 $namePengguna = Auth::user()->namePengguna;
                 $idPengguna = Auth::user()->idPengguna;
-                return redirect("/careerPath");
+                return redirect("/careerPath/$namePengguna");
                 // return redirect('/yourCompetition');
                 // return view('/yourCompetition', compact('namePengguna'));
                 // return redirect('/yourCompetition/JohnDoe');
