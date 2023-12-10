@@ -79,6 +79,37 @@
         </div>
 
         <div class="card-container row">
+            <a href="" class="card">
+                <div class="company">
+                    <div class="logo">
+                        <img src="/images/logo-gojek.png" alt="">
+                    </div>
+
+                    <div class="title">
+                        <p class="role">
+                            @foreach($internship as $role)
+                            {{$role->role}}
+                            @endforeach
+                        </p>
+                        <p class="perusahaan">
+                            @foreach($internship as $perusahaan)
+                            {{$perusahaan->perusahaan}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                </div>
+            </a>
 
             <a href="" class="card">
                 <div class="company">
@@ -111,6 +142,39 @@
                     </div>
                 </div>
             </a>
+
+            <a href="" class="card">
+                <div class="company">
+                    <div class="logo">
+                        <img src="/images/logo-gojek.png" alt="">
+                    </div>
+
+                    <div class="title">
+                        <p class="role">
+                            @foreach($internship as $role)
+                            {{$role->role}}
+                            @endforeach
+                        </p>
+                        <p class="perusahaan">
+                            @foreach($internship as $perusahaan)
+                            {{$perusahaan->perusahaan}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                </div>
+            </a>
+
             
         </div>
 
@@ -122,6 +186,107 @@
                     <a href="">Show more</a>
             </div>
         </div>
+
+        <div class="card-container row">
+            <a href="" class="card">
+                <div class="company">
+                    <div class="logo">
+                        <img src="/images/logo-gojek.png" alt="">
+                    </div>
+
+                    <div class="title">
+                        <p class="role">
+                            @foreach($internship as $role)
+                            {{$role->role}}
+                            @endforeach
+                        </p>
+                        <p class="perusahaan">
+                            @foreach($internship as $perusahaan)
+                            {{$perusahaan->perusahaan}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="" class="card">
+                <div class="company">
+                    <div class="logo">
+                        <img src="/images/logo-gojek.png" alt="">
+                    </div>
+
+                    <div class="title">
+                        <p class="role">
+                            @foreach($internship as $role)
+                            {{$role->role}}
+                            @endforeach
+                        </p>
+                        <p class="perusahaan">
+                            @foreach($internship as $perusahaan)
+                            {{$perusahaan->perusahaan}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="" class="card">
+                <div class="company">
+                    <div class="logo">
+                        <img src="/images/logo-gojek.png" alt="">
+                    </div>
+
+                    <div class="title">
+                        <p class="role">
+                            @foreach($internship as $role)
+                            {{$role->role}}
+                            @endforeach
+                        </p>
+                        <p class="perusahaan">
+                            @foreach($internship as $perusahaan)
+                            {{$perusahaan->perusahaan}}
+                            @endforeach
+                        </p>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                    <div class="list row">
+                        <img src="/images/place.png" alt="">
+                        <p class="lokasi">tes</p>
+                    </div>
+                </div>
+            </a>
+
+            
+        </div>
+
 
 
 
