@@ -34,6 +34,16 @@ class MahasiswaController extends Controller
         $course = kursus::all();
         return view('Mahasiswa.coursefinder', compact('course'));
     }
+
+    public function showDataScienceIntern() {
+        $internship = magang::all();
+        return view('Mahasiswa.datascience', compact('internship'));
+    }
+
+    public function showInteractiveMediaIntern() {
+        $internship = magang::all();
+        return view('Mahasiswa.interactivemedia', compact('internship'));
+    }
 }
 
 

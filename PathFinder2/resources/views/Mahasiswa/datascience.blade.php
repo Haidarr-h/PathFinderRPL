@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InternshipFinder</title>
-    <link rel="stylesheet" href="{{ asset('css/internshipfinder.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/datascience.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 
@@ -58,6 +58,11 @@
     </div>
 
     <div class="content">
+        <div class="back-btn row">
+            <img src="/images/back.png" alt="computer">
+            <a href="/internshipfinder" class="back">Back</a>
+        </div>
+
 
         <div class="judul">
             <h1>Internship Finder</h1>
@@ -77,7 +82,6 @@
             <!--DATA SCIENCE-->
             <div class="headline">
                 <h3>Data Science</h3>
-                <a href="/datascience">Show more</a>
             </div>
         </div>
 
@@ -120,58 +124,10 @@
             </a>
             @endif
             @endforeach
-        </div>
-   
-        <div class="box">
-            <!--INTERACTIVE MEDIA-->
-            <div class="headline">
-                    <h3>Interactive Media</h3>
-                    <a href="/interactivemedia">Show more</a>
-            </div>
-        </div>
 
-        <div class="card-container row">
-            @foreach($internship as $intern)
-            @if($intern->stream == "InteractiveMedia")
-            <a href="" class="card">
-                <div class="company">
-                    <div class="logo">
-                        <img src="/images/logo-gojek.png" alt="">
-                    </div>
-
-                    <div class="title">
-                        <p class="role">
-                            {{$intern->role}}
-            
-                        </p>
-                        <p class="perusahaan">
-                            {{$intern->perusahaan}}
-                            
-                        </p>
-                    </div>
-                </div>
-
-                <div class="details">
-                    <div class="list row">
-                        <img src="/images/timer.png" alt="">
-                        <p class="durasi">
-                            {{$intern->durasi}}
-                       
-                        </p>
-                    </div>
-                    <div class="list row">
-                        <img src="/images/place.png" alt="">
-                        <p class="lokasi">
-                            {{$intern->lokasi}}
-                        </p>
-                    </div>
-                </div>
-            </a>
-            @endif
-            @endforeach       
         </div>
-        
     </div>
+</div>
 
 </body>
 </html>
