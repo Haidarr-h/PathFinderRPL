@@ -1,22 +1,41 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\kursusController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+//*Contoh == Route::get('/edit', [TimController::class, 'edit']);
+//* Route::post('/tim/tambah-member', [TimController::class, 'tambahMember'])->name('tambahMember');
+//* Route::post('/tim/simpan-tim/{idPengguna}/{namePengguna}', [TimController::class, 'simpanTim'])->name('simpan-tim');
+
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Adminn.adminCareerPath');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
+
+// ! ==============MAHASISWA===============
+// ! CAREERPATH MAHASISWA
+Route::get('/careerPath', [MahasiswaController::class, 'showCareerPath']);
+// ! INTERNSHIP FINDER
+Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
+
+
+// ! ==============ADMIN===============
+// ! COURSE FINDER ADMIN
+Route::get('/courseFinderAdmin', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
+Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']);
+
+// ! CAREERPATH ADMIN
+Route::get('/careerPathAdmin', [AdminController::class, 'showCareerPath']); //* DEFAULT
+Route::get('/CareerPath/CreateForm', [AdminController::class, 'createCareerPath']); //form createnya saja
+// *CRUD create karir
+Route::post('/CareerPath/Create', [AdminController::class, 'createKarir'])->name('tambahKarir');
+
+
+
+
+
+
