@@ -30,16 +30,22 @@ Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::
 
 // ! INTERNSHIP FINDER
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
-Route::resource('magang', magangController::class);
 
 // ! COURSE FINDER
-Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);
+Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']); //*BELOMMM
 
 
 // ! ==============ADMIN===============
+
+// ! INTERNSHIP FINDER ADMIN
+Route::resource('magang', magangController::class);
+
 // ! COURSE FINDER ADMIN
-Route::get('/courseFinderAdmin', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
+Route::get('/courseFinderAdmi', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
+Route::get('/courseFinderAdmin', [kursusController::class, 'index']); //* PENDING UPDATE
+
 Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']);
+Route::resource('kursus', kursusController::class);
 
 // ! CAREERPATH ADMIN
 Route::get('/careerPathAdmin', [AdminController::class, 'showCareerPath']); //* DEFAULT

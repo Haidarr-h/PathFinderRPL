@@ -31,7 +31,7 @@
                 </a>
             </div>
 
-            <a href="#">
+            <a href="/courseFinderAdmin">
                 <img src="/images/internshipFinder.png" alt="Settings Icon">
                 Internship Finder
             </a>

@@ -10,7 +10,7 @@ class AdminController extends Controller
     // * COURSE FINDER
     public function showCourseFinder()
     {
-        return view('Adminn.adminCourseFinder');
+        return view('index');
 
     }
     public function createCourseFinder()
