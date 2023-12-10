@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\kursusController;
+use App\Http\Controllers\magangController;
+
 
 
 //*Contoh == Route::get('/edit', [TimController::class, 'edit']);
