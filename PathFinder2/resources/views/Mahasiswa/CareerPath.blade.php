@@ -19,7 +19,7 @@
         </div>
 
         <div class="options">
-            <a href="#" class="dashboard">
+            <a href="/careerPath" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
             </a>
@@ -35,18 +35,21 @@
                 </a>
             </div>
 
-            <a href="#">
+            <a href="/internshipfinder">
                 <img src="/images/internshipFinder.png" alt="Settings Icon">
                 Internship Finder
             </a>
-            <a href="/courseFinderAdmin">
+
+            <a href="/coursefinder">
                 <img src="/images/lucide_award.png" alt="Settings Icon">
                 Course Finder
             </a>
+            
             <a href="#">
                 <img src="/images/lucide_wrench.png" alt="Settings Icon">
                 Settings
             </a>
+            
             <a href="#" class="mt-auto">
                 <img src="/images/lucide_log-out.png" alt="Settings Icon">
                 Log Out

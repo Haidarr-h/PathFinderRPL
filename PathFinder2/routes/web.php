@@ -13,7 +13,7 @@ use App\Http\Controllers\magangController;
 //* Route::post('/tim/simpan-tim/{idPengguna}/{namePengguna}', [TimController::class, 'simpanTim'])->name('simpan-tim');
 
 
-Route::get('/', [AdminController::class, 'showCareerPath']); //* DEFAULT
+Route::get('/', [MahasiswaController::class, 'showCareerPath']); //* DEFAULT
 
 
 // ! ==============MAHASISWA===============
