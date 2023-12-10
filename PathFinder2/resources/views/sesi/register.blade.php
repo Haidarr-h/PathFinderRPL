@@ -80,7 +80,7 @@
         <br>
         <div class="text-center">
             Sudah memiliki akun?
-            <a href="/sesi">Login</a>
+            <a href="/">Login</a>
         </div>
     </div>
 

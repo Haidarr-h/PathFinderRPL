@@ -112,7 +112,7 @@ class SessionController extends Controller
             // Jika berhasil
             // Redirect ke halaman utama
             // return redirect('/yourCompetition');
-            return redirect('/sesi');
+            return redirect('/');
         } else {
             // Jika gagal
             // return 'Gagal';
