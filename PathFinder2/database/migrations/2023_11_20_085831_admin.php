@@ -29,13 +29,13 @@ return new class extends Migration
             $table->timestamps(); // Created_at and updated_at columns
         });
 
-        Schema::create('course', function (Blueprint $table) {
-            $table->id(); // Auto-incremental primary key
+        Schema::create('kursus', function (Blueprint $table) {
+            $table->integer('id_course');
+            $table->unique('id_course');
+            $table->string('course_name');
             $table->integer('rating');
-            $table->integer('durasi');
+            $table->string('durasi');
             $table->string('topik');
-            $table->rememberToken();
-            $table->timestamps(); // Created_at and updated_at columns
         });
 
         Schema::create('internship', function (Blueprint $table) {
