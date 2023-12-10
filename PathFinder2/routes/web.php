@@ -5,6 +5,8 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\kursusController;
 use App\Http\Controllers\magangController;
+use App\Http\Controllers\SessionController;
+
 
 
 
@@ -13,7 +15,15 @@ use App\Http\Controllers\magangController;
 //* Route::post('/tim/simpan-tim/{idPengguna}/{namePengguna}', [TimController::class, 'simpanTim'])->name('simpan-tim');
 
 
-Route::get('/', [AdminController::class, 'showCareerPath']); //* DEFAULT
+Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
+
+// login 
+Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
+Route::post('/sesi/login', [SessionController::class, 'login']); //*pencet button login
+
+Route::get('/sesi/register', [SessionController::class, 'register']); //*pencet button login
+Route::post('/sesi/create', [SessionController::class, 'create']); //*pencet button REGISTER
+
 
 
 // ! ==============MAHASISWA===============
@@ -24,18 +34,23 @@ Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::
 
 // ! INTERNSHIP FINDER
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
-Route::resource('magang', magangController::class);
 Route::get('/datascience',[MahasiswaController::class, 'showDataScienceIntern']);
 Route::get('/interactivemedia',[MahasiswaController::class, 'showInteractiveMediaIntern']);
 
 // ! COURSE FINDER
-Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);
+Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']); //*BELOMMM
 
 
 // ! ==============ADMIN===============
+
+// ! INTERNSHIP FINDER ADMIN
+Route::resource('magang', magangController::class);
+Route::get('/internshipFinderAdmin', [magangController::class, 'index']); 
+
 // ! COURSE FINDER ADMIN
-Route::get('/courseFinderAdmin', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
+Route::get('/courseFinderAdmin', [kursusController::class, 'index']); 
 Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']);
+Route::resource('kursus', kursusController::class);
 
 // ! CAREERPATH ADMIN
 Route::get('/careerPathAdmin', [AdminController::class, 'showCareerPath']); //* DEFAULT
@@ -53,6 +68,10 @@ Route::get('/CareerPath/edit/{idKarir}', [AdminController::class, 'editKarir'])-
 
 // DELETE
 Route::get('/CareerPath/delete/{idKarir}', [AdminController::class, 'deleteKarir'])->name('deleteKarir');
+
+Route::resource('kursus', kursusController::class);
+
+Route::resource('magang', magangController::class);
 
 
 

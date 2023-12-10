@@ -33,7 +33,6 @@ class MahasiswaController extends Controller
     public function showCourseFinder() {
         $course = kursus::all();
         return view('Mahasiswa.coursefinder', compact('course'));
-        
     }
 
     public function showDataScienceIntern() {

@@ -23,7 +23,7 @@ class courseSeeder extends Seeder
                 'course_name' => 'RevoU',
                 'rating' => '5',
                 'durasi' => '4 months',
-                'topik' => 'Jakarta Selatan'
+                'topik' => 'Data Analyst'
 
             ],
             [
@@ -31,35 +31,35 @@ class courseSeeder extends Seeder
                 'course_name' => 'GreatEdu',
                 'rating' => '4',
                 'durasi' => '4 months',
-                'topik' => 'Jakarta Selatan'
+                'topik' => 'Data Science Bootcamp'
             ],
             [
                 'id_course' => '3',
                 'course_name' => 'Mojadiapp',
                 'rating' => '4 ',
                 'durasi' => '5 months',
-                'topik' => 'Jakarta Putra' 
+                'topik' => 'Data Scientist & Analyst' 
             ],
             [
                 'id_course' => '4',
                 'course_name' => 'Sanber Foundation',
                 'rating' => '5',
                 'durasi' => '4 months',
-                'topik' => 'Bandung'
+                'topik' => 'UI/UX Designer'
             ],
             [
                 'id_course' => '5',
                 'course_name' => 'GreatEdu',
                 'rating' => '5',
                 'durasi' => '5 months',
-                'topik' => 'Jakarta Selatan'
+                'topik' => 'UI/UX Bootcamp'
             ],
             [
                 'id_course' => '6',
                 'course_name' => 'Cakap',
                 'rating' => '4',
                 'durasi' => '5 months',
-                'topik' => 'Jakarta Barat'
+                'topik' => 'UI/UX Designer'
             ]
 
             
