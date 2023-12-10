@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\internship;
+use App\Models\magang;
+use App\Models\kursus;
 use Illuminate\Http\Request;
 use App\Models\career;
 
@@ -25,12 +26,15 @@ class MahasiswaController extends Controller
   
 
     public function showInternshipFinder() {
-        $internship = internship::all();
+        $internship = magang::all();
         return view('Mahasiswa.internshipfinder', compact('internship'));
     }
 
     public function showCourseFinder() {
-        // $course = 
-        return view(('Mahasiswa.coursefinder'));
+        $course = kursus::all();
+        return view('Mahasiswa.coursefinder', compact('course'));
+        
     }
 }
+
+
