@@ -53,13 +53,16 @@
 
     <div class="content">
         <div class="judul">
-            <h1>Insert Career Path Information</h1>
+            <h1>Edit Career Path Information</h1>
             <img src="/images/redFlag.png" alt="bendera">
         </div>
         <h3>Fill in the fields according to valid information.</h3>
 
         <div class="formPengisian">
-            <form action="{{ route('tambahKarir') }}" method="GET">
+            @foreach($careers as $career)
+            @if ($career->idKarir==$idKarir)
+
+            <form action="/CareerPath/update/{{$idKarir}}" method="GET">
                 @csrf <!-- Include the CSRF token -->
 
                 <!-- Box 1: Dropdown -->
@@ -70,32 +73,35 @@
                 </select>
 
                 <label for="id" class="formLabel">Id Data :</label>
-                <input type="text" class="formTextInput" id="id" name="idKarir">
+                <input value="{{$idKarir}}" type="text" class="formTextInput" id="id" name="idKarir" readonly>
 
                 <label for="nama" class="formLabel">Nama Karir :</label>
-                <input type="text" class="formTextInput" id="nama" name="namaKarir">
+                <input value="{{ $career->namaKarir }}" type="text" class="formTextInput" id="nama" name="namaKarir">
 
                 <label for="textInputBox2" class="formLabel">Level 1 :</label>
-                <input type="text" class="formTextInput" id="textInputBox2" name="level1">
+                <input value="{{ $career->level1 }}" type="text" class="formTextInput" id="textInputBox2" name="level1">
 
                 <label for="textInputBox3" class="formLabel">Level 2 :</label>
-                <input type="text" class="formTextInput" id="textInputBox3" name="level2">
+                <input value="{{ $career->level2 }}" type="text" class="formTextInput" id="textInputBox3" name="level2">
 
                 <label for="textInputBox4" class="formLabel">Level 3 :</label>
-                <input type="text" class="formTextInput" id="textInputBox4" name="level3">
+                <input value="{{ $career->level3 }}" type="text" class="formTextInput" id="textInputBox4" name="level3">
 
                 <label for="textInputBox5" class="formLabel">Level 4 :</label>
-                <input type="text" class="formTextInput" id="textInputBox5" name="level4">
+                <input value="{{ $career->level4 }}" type="text" class="formTextInput" id="textInputBox5" name="level4">
 
                 <label for="textInputBox6" class="formLabel">Level 5 :</label>
-                <input type="text" class="formTextInput" id="textInputBox6" name="level5">
+                <input value="{{ $career->level5 }}" type="text" class="formTextInput" id="textInputBox6" name="level5">
 
-                <input type="submit" value="Tambahkan Path" class="submitButton">
+                <input type="submit" value="Edit Path" class="submitButton">
             </form>
 
             <div id="gambar">
                 <img src="/images/card.png" id="gambar1" alt="Gambar 1">
             </div>
+
+            @endif
+            @endforeach
 
         </div>
 
