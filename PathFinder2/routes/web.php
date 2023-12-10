@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\kursusController;
 
 
 //*Contoh == Route::get('/edit', [TimController::class, 'edit']);
@@ -12,9 +11,16 @@ use App\Http\Controllers\kursusController;
 
 
 Route::get('/', function () {
-    return view('Adminn.adminCareerPath');
+    return view('welcome');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::get('/ayen', function () {
+    return view('x');
+});
 
 // ! ==============MAHASISWA===============
 // ! CAREERPATH MAHASISWA
@@ -26,16 +32,6 @@ Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFind
 // ! ==============ADMIN===============
 // ! COURSE FINDER ADMIN
 Route::get('/courseFinderAdmin', [AdminController::class, 'showCourseFinder']); //* PENDING UPDATE
-Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']);
-
-// ! CAREERPATH ADMIN
-Route::get('/careerPathAdmin', [AdminController::class, 'showCareerPath']); //* DEFAULT
-Route::get('/CareerPath/CreateForm', [AdminController::class, 'createCareerPath']); //form createnya saja
-// *CRUD create karir
-Route::post('/CareerPath/Create', [AdminController::class, 'createKarir'])->name('tambahKarir');
-
-
-
 
 
 
