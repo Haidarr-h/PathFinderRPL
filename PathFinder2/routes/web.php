@@ -21,6 +21,10 @@ Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
 Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
 Route::post('/sesi/login', [SessionController::class, 'login']); //*pencet button login
 
+Route::get('/sesi/register', [SessionController::class, 'register']); //*pencet button login
+Route::post('/sesi/create', [SessionController::class, 'create']); //*pencet button REGISTER
+
+
 
 // ! ==============MAHASISWA===============
 // ! CAREERPATH MAHASISWA
@@ -63,6 +67,10 @@ Route::get('/CareerPath/edit/{idKarir}', [AdminController::class, 'editKarir'])-
 
 // DELETE
 Route::get('/CareerPath/delete/{idKarir}', [AdminController::class, 'deleteKarir'])->name('deleteKarir');
+
+Route::resource('kursus', kursusController::class);
+
+Route::resource('magang', magangController::class);
 
 
 
