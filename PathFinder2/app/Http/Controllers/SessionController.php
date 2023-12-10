@@ -40,7 +40,7 @@ class SessionController extends Controller
             if (strtolower($kategori) == 'user') {
                 $namePengguna = Auth::user()->namePengguna;
                 $idPengguna = Auth::user()->idPengguna;
-                return redirect("/careerPath");
+                return redirect("/careerPath/$namePengguna");
                 // return redirect('/yourCompetition');
                 // return view('/yourCompetition', compact('namePengguna'));
                 // return redirect('/yourCompetition/JohnDoe');
@@ -58,7 +58,7 @@ class SessionController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect('sesi')->withErrors('succes', 'Berhasil logout');
+        return redirect('/')->withErrors('succes', 'Berhasil logout');
     }
     function register()
     {

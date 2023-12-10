@@ -215,7 +215,7 @@
       <img src="{{ asset('image/lucide_wrench.png') }}" alt="Settings Icon">
       Settings
     </a>
-    <a href="#" class="mt-auto">
+    <a href="/sesi/logout" class="mt-auto">
       <img src="{{ asset('image/lucide_log-out.png') }}" alt="Settings Icon">
       Log Out
     </a>

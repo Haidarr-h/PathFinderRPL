@@ -9,11 +9,11 @@ use App\Models\career;
 
 class MahasiswaController extends Controller
 {
-    public function showCareerPath()
+    public function showCareerPath($namePengguna)
     {
         $careers = Career::all();
 
-        return view('Mahasiswa.CareerPath', compact('careers'));
+        return view('Mahasiswa.CareerPath', compact('careers', 'namePengguna'));
     }
 
     public function kontenMHSCareerPath($namaKarir, $idKarir)
@@ -25,9 +25,9 @@ class MahasiswaController extends Controller
 
   
 
-    public function showInternshipFinder() {
+    public function showInternshipFinder($namePengguna) {
         $internship = magang::all();
-        return view('Mahasiswa.internshipfinder', compact('internship'));
+        return view('Mahasiswa.internshipfinder', compact('internship', 'namePengguna'));
     }
 
     public function showCourseFinder() {
