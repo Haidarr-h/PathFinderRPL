@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarrerPath</title>
-    <link rel="stylesheet" href="{{ asset('css/careerPath.css') }}">
+    <title>Konten CarrerPath</title>
+    <link rel="stylesheet" href="{{ asset('css/careerPathAdmin.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 
@@ -22,10 +22,6 @@
             <a href="#" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
-            </a>
-            <a href="#">
-                <img src="/images/lucide_bookmark.png" alt="Settings Icon">
-                Favorites
             </a>
 
             <div class="mainSub2">
@@ -57,54 +53,62 @@
 
     <div class="content">
         <div class="judul">
-            <h1>Career Path Roadmap</h1>
+            <h1>Career Path Information</h1>
             <img src="/images/redFlag.png" alt="bendera">
         </div>
-        <h3>Don't wait. The sooner you begin, the sooner you'll reach your destination.</h3>
+        <h3>Let's work together as admins to build a better environment for our users.</h3>
 
-        <div id="gambar">
-            <img src="/images/card.png" id="gambar1" alt="Gambar 1">
-            <img src="/images/card2.png" id="gambar2" alt="Gambar 2">
-        </div>
-
-        <div class="BottomContent">
-            <h3>Unlock Your Career Prospects</h3>
-
-            <div class="dataScience">
-                <h4>Data Science</h4>
-
-                <div class="dataChoices">
-                    @foreach($careers as $career)
-                    @if ($career->stream=="DataScience")
-                    <a href="/CareerPath/kontenMHS/{{ $career->namaKarir}}/{{ $career->idKarir }}">{{ $career->namaKarir }}</a>
-                    
-                    @endif
-                    @endforeach
-                </div>
+        <div class="isi">
+            <div class="headerIsi">
+                <a>
+                    <h1>{{ $namaKarir }}</h1>
+                </a>    
 
             </div>
 
-            <div class="interactiveMedia">
-                <h4>Interactive Media</h4>
+            @foreach($careers as $career)
+            @if ($career->namaKarir==$namaKarir)
+            <div class="sectionLevel">
+                <a href="#" class="levels">
+                    <h3>Level 1</h3>
+                    {{ $career->level1 }}
+                    <p>Details</p>
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 2</h3>
+                    {{ $career->level2 }}
+                    <p>Details</p>
 
-                <div class="internChoices">
-                    @foreach($careers as $career)
-                    @if ($career->stream=="InteractiveMedia")
-                    <a href="/CareerPath/kontenMHS/{{ $career->namaKarir}}/{{ $career->idKarir }}">{{ $career->namaKarir }}</a>
-                    @endif
-                    @endforeach
-                </div>
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 3</h3>
+                    {{ $career->level3 }}
+                    <p>Details</p>
+
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 4</h3>
+                    {{ $career->level4 }}
+                    <p>Details</p>
+
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 5</h3>
+                    {{ $career->level5 }}
+                    <p>Details</p>
+
+                </a>
             </div>
-        </div>
 
+
+
+            @endif
+            @endforeach
+        </div>
 
     </div>
 
-    <div class="right-sidebar">
-        <div class="profile">
-            <img src="/images/profileImage.png" alt="Profile">
-        </div>
-    </div>
 
 </body>
+
 </html>

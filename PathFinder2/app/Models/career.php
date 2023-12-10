@@ -9,6 +9,7 @@ class career extends Model
 {
     protected $table = 'career';
     public $timestamps = false;
+    protected $primaryKey = 'idKarir';
     protected $fillable = [
         'idKarir',
         'stream',

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareerPath Admin</title>
+    <title>Konten CarrerPath Admin</title>
     <link rel="stylesheet" href="{{ asset('css/careerPathAdmin.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
@@ -58,39 +58,62 @@
         </div>
         <h3>Let's work together as admins to build a better environment for our users.</h3>
 
+        <div class="isi">
+            <div class="headerIsi">
+                <a>
+                    <h1>{{ $namaKarir }}</h1>
+                </a>    
 
-        <div class="dataScience">
-            <h4>Data Science</h4>
+                <div class="kanan">
+                    <a href="/CareerPath/edit/{{ $idKarir }}" class="Edit">
+                        Edit
+                    </a>
 
-            <div class="dataChoices">
-                @foreach($careers as $career)
-                @if ($career->stream=="DataScience")
-                <a href="/CareerPath/konten/{{$career->namaKarir}}/{{$career->idKarir}}">{{ $career->namaKarir }}</a>
-                @endif
-                @endforeach
+                    <a href="/CareerPath/delete/{{ $idKarir }}" class="Delete">
+                        Delete
+                    </a>
+                </div>
+
             </div>
-            
-        </div>
 
-        <div class="dataScience">
-            <h4>Interactive Media</h4>
+            @foreach($careers as $career)
+            @if ($career->namaKarir==$namaKarir)
+            <div class="sectionLevel">
+                <a href="#" class="levels">
+                    <h3>Level 1</h3>
+                    {{ $career->level1 }}
+                    <p>Details</p>
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 2</h3>
+                    {{ $career->level2 }}
+                    <p>Details</p>
 
-            <div class="dataChoices">
-                @foreach($careers as $career)
-                @if ($career->stream=="InteractiveMedia")
-                <a href="/CareerPath/konten/{{$career->namaKarir}}/{{$career->idKarir}}">{{ $career->namaKarir }}</a>
-                @endif
-                @endforeach
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 3</h3>
+                    {{ $career->level3 }}
+                    <p>Details</p>
+
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 4</h3>
+                    {{ $career->level4 }}
+                    <p>Details</p>
+
+                </a>
+                <a href="#" class="levels">
+                    <h3>Level 5</h3>
+                    {{ $career->level5 }}
+                    <p>Details</p>
+
+                </a>
             </div>
-        </div>
-
-        <div class="addPath">
-            <a href="/CareerPath/CreateForm">
-                <img src="/image/tambah.png" alt="tambah">
-                <h3>Add Career Path</h3>
-            </a>
 
 
+
+            @endif
+            @endforeach
         </div>
 
     </div>
