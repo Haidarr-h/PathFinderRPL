@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\internship;
 use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
@@ -14,5 +15,15 @@ class MahasiswaController extends Controller
     public function showAyen()
     {
         return view('x');
+    }
+
+    public function showInternshipFinder() {
+        $internship = internship::all();
+        return view('Mahasiswa.internshipfinder', compact('internship'));
+    }
+
+    public function showCourseFinder() {
+        // $course = 
+        return view(('Mahasiswa.coursefinder'));
     }
 }

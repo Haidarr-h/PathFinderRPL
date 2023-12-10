@@ -27,6 +27,10 @@ Route::get('/ayen', function () {
 // ! ==============MAHASISWA===============
 // ! CAREERPATH MAHASISWA
 Route::get('/careerPath', [MahasiswaController::class, 'showCareerPath']);
+// ! INTERNSHIP FINDER
+Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
+// ! COURSE FINDER
+Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);
 
 
 // ! ==============ADMIN===============
