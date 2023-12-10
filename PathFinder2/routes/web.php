@@ -24,6 +24,8 @@ Route::get('/CareerPath/kontenMHS/{namaKarir}/{idKarir}', [MahasiswaController::
 
 // ! INTERNSHIP FINDER
 Route::get('/internshipfinder', [MahasiswaController::class, 'showInternshipFinder']);
+Route::resource('magang', magangController::class);
+
 // ! COURSE FINDER
 Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);
 
@@ -36,11 +38,20 @@ Route::get('/createCourseFinder', [AdminController::class, 'createCourseFinder']
 // ! CAREERPATH ADMIN
 Route::get('/careerPathAdmin', [AdminController::class, 'showCareerPath']); //* DEFAULT
 Route::get('/CareerPath/CreateForm', [AdminController::class, 'createCareerPath']); //form createnya saja
-// *CRUD create karir
+
+// *CRUD karir
+// konten karir
+Route::get('/CareerPath/konten/{namaKarir}/{idKarir}', [AdminController::class, 'kontenKarir'])->name('kontenKarir');
+
+// CREATE
 Route::get('/CareerPath/Create', [AdminController::class, 'createKarir'])->name('tambahKarir');
 
+// EDIT
+Route::get('/CareerPath/edit/{idKarir}', [AdminController::class, 'editKarir'])->name('editKarir');
 
-Route::resource('magang', magangController::class);
+// DELETE
+Route::get('/CareerPath/delete/{idKarir}', [AdminController::class, 'deleteKarir'])->name('deleteKarir');
+
 
 
 
