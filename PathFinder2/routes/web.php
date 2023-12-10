@@ -18,7 +18,7 @@ Route::get('/', [SessionController::class, 'index']); //* LANDING PAGE
 Route::post('/sesi/login', [SessionController::class, 'login']); //*pencet button login
 Route::get('/sesi/register', [SessionController::class, 'register']); //*pencet button login
 Route::post('/sesi/create', [SessionController::class, 'create']); //*pencet button REGISTER
-Route::post('/sesi/logout', [SessionController::class, 'logout']); //*pencet button logout
+Route::get('/sesi/logout', [SessionController::class, 'logout']); //*pencet button logout
 
 // ! ==============MAHASISWA===============
 // ! CAREERPATH MAHASISWA

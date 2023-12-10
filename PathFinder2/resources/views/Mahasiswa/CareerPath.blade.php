@@ -50,7 +50,7 @@
                 Settings
             </a>
             
-            <a href="#" class="mt-auto">
+            <a href="/sesi/logout" class="mt-auto">
                 <img src="/images/lucide_log-out.png" alt="Settings Icon">
                 Log Out
             </a>
