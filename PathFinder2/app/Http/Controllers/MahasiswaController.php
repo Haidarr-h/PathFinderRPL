@@ -30,9 +30,9 @@ class MahasiswaController extends Controller
         return view('Mahasiswa.internshipfinder', compact('internship', 'namePengguna'));
     }
 
-    public function showCourseFinder() {
+    public function showCourseFinder($namePengguna) {
         $course = kursus::all();
-        return view('Mahasiswa.coursefinder', compact('course'));
+        return view('Mahasiswa.coursefinder', compact('course', 'namePengguna'));
     }
 
     public function showDataScienceIntern() {

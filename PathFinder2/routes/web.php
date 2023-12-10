@@ -41,7 +41,8 @@ Route::get('/coursedetail',[MahasiswaController::class, 'showCourseDetail']);
 
 
 // ! COURSE FINDER
-Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']); //*BELOMMM
+Route::get('/coursefinder', [MahasiswaController::class, 'showCourseFinder']);
+Route::get('/coursefinder/{namePengguna}', [MahasiswaController::class, 'showCourseFinder']);
 Route::get('/datasciencecourse',[MahasiswaController::class, 'showDataScienceCourse']);
 Route::get('/interactivemediacourse',[MahasiswaController::class, 'showInteractiveMediaCourse']);
 

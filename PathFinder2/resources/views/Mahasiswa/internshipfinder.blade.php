@@ -35,13 +35,13 @@
             
 
             <div class="mainSub2">
-                <a href="#"  class="mainSub">
+                <a href="/internshipfinder/{{ $namePengguna }}"  class="mainSub">
                     <img src="/images/internshipFinder-2.png" alt="Settings Icon">
                     Internship Finder
                 </a>
             </div>
 
-            <a href="/courseFinderAdmin">
+            <a href="/coursefinder/{{ $namePengguna }}">
                 <img src="/images/lucide_award.png" alt="Settings Icon">
                 Course Finder
             </a>

@@ -19,7 +19,7 @@
         </div>
 
         <div class="options">
-            <a href="#" class="dashboard">
+            <a href="/careerPath/{{ $namePengguna }}" class="dashboard">
                 <img src="/images/lucide_home.png" alt="Settings Icon" class="dashboard-icon">
                 Dashboard
             </a>
@@ -28,28 +28,31 @@
                 Favorites
             </a>
 
-            <a href="/careerPath">
+            <a href="/careerPath/{{ $namePengguna }}">
                 <img src="/images/lucide_flag-triangle-right-2.png" alt="Settings Icon">
-                    Career Path
+                Career Path
             </a>
-            
 
-            <div class="mainSub2">
-                <a href="#"  class="mainSub">
-                    <img src="/images/internshipFinder-2.png" alt="Settings Icon">
+
+            <div >
+                <a href="/internshipfinder/{{ $namePengguna }}" >
+                    <img src="/images/internship.png" alt="Settings Icon">
                     Internship Finder
                 </a>
             </div>
 
-            <a href="/courseFinderAdmin">
-                <img src="/images/lucide_award.png" alt="Settings Icon">
-                Course Finder
-            </a>
+            <div class="mainSub2">
+                <a href="/coursefinder/{{ $namePengguna }}" class="mainSub">
+                    <img src="/images/putih.png" alt="Settings Icon">
+                    Course Finder
+                </a>
+            </div>
+
             <a href="#">
                 <img src="/images/lucide_wrench.png" alt="Settings Icon">
                 Settings
             </a>
-            <a href="#" class="mt-auto">
+            <a href="/sesi/logout" class="mt-auto">
                 <img src="/images/lucide_log-out.png" alt="Settings Icon">
                 Log Out
             </a>
@@ -90,11 +93,11 @@
                     <div class="title">
                         <p class="topik">
                             {{$item->topik}}
-                            
+
                         </p>
                         <p class="perusahaan">
                             {{$item->course_name}}
-                          
+
                         </p>
                     </div>
                 </div>
@@ -116,8 +119,8 @@
 
         <div class="box">
             <div class="headline">
-                    <h3>Interactive Media</h3>
-                    <a href="/interactivemediacourse">Show more</a>
+                <h3>Interactive Media</h3>
+                <a href="/interactivemediacourse">Show more</a>
             </div>
         </div>
 
@@ -133,7 +136,7 @@
                     <div class="title">
                         <p class="topik">
                             {{$item->topik}}
-                           
+
                         </p>
                         <p class="perusahaan">
                             {{$item->course_name}}
@@ -163,4 +166,5 @@
     </div> -->
 
 </body>
+
 </html>
