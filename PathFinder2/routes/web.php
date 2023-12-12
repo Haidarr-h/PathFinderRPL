@@ -72,3 +72,6 @@ Route::get('/CareerPath/edit/{idKarir}', [AdminController::class, 'editKarir'])-
 
 // DELETE
 Route::get('/CareerPath/delete/{idKarir}', [AdminController::class, 'deleteKarir'])->name('deleteKarir');
+
+// UPDATE
+Route::get('/CareerPath/update/{idKarir}', [AdminController::class, 'updateCareer'])->name('updateCareer');
